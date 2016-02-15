@@ -37,7 +37,7 @@ def send_thank_you_mail(email):
     # Hard-coded templates are not best practice.
     msg_body = """
     Hi %s,
-        Thank you very much for your repeated comments on our service.
+        Thank you very much for reading this code. I copied this too.
     The interaction is much appreciated.
 
     Thank You.""" % email
@@ -46,6 +46,11 @@ def send_thank_you_mail(email):
     smtpserver.sendmail(from_email, to_email, content)
     smtpserver.close()
 
+
+''' if __name__ == "__main__": This represents that 
+    Mentioned portion will execute only if it is part of the main module.
+    i.e. python setup has __name__ variable as the main module.
+    '''
 if __name__ == "__main__":
     # for every line of input.
     for email in sys.stdin.readlines():
